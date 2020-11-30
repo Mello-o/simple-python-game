@@ -1,7 +1,7 @@
 import random
 
 print('\n*'*5)
-print('****** BEM VINDO AO JOGO DE ADIVINHACAO ******')
+print('****** BEM VINDO AO JOGO DE ADIVINHAÇÃO ******')
 
 print('\n\nEscolha o seu nível: ')
 print(
@@ -40,7 +40,6 @@ number_random = random.randint(0, 101)
 
 
 print('\n\nAdivinhe um número entre 0 e 100!\n\n')
-print(number_random)
 
 
 for chances in range(0, tries):
@@ -62,4 +61,8 @@ for chances in range(0, tries):
 	else:
 		print('\nVOCE ACERTOU!\n')
 		break
+
+if user_number != number_random:
+	print('Infelizmente voce não acertou. O número era ', number_random)
+
 
