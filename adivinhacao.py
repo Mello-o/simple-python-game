@@ -47,6 +47,7 @@ def jogar():
 		
 		while True:
 			try:
+				print(f'Tentativa {chances + 1} de {tries}')
 				user_number = int(input('Tente adivinhar.. qual é o número? '))
 				break
 			except ValueError:
