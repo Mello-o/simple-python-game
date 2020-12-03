@@ -25,6 +25,17 @@ def jogar():
 		except ValueError:
 			print('Somente números, por favor.')
 
+	letter_word = input('Digite um letra ou palavra (caso vc saiba ;p) : ')	
+
+	# SETTING A LIST TO PUT THE USERS'S VALUES
+	users_answer = []
+
+	for letra in secret_word:
+		if letra == 
+
+
+
+
 
 if __name__ == '__main__':
 	jogar()
