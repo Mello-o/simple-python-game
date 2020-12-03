@@ -1,4 +1,5 @@
 import random
+import dica_adivinhacao
 
 def jogar():
 	print('\n*'*5)
@@ -58,8 +59,10 @@ def jogar():
 			
 		if higher:
 			print('\nO número é maior...\n')
+			dica_adivinhacao.dica_par_impar(chances, number_random)
 		elif lower:
 			print('\nO número é menor...\n')
+			dica_adivinhacao.dica_par_impar(chances, number_random)
 		else:
 			print('\nVOCE ACERTOU!\n')
 			break
