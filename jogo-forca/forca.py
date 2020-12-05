@@ -17,25 +17,39 @@ def jogar():
 		try:
 			level = int(input('digite o nível do jogo: '))
 
-			if level == 1 or level == 2 or level == 3:
+			if level == 1:
+				level = 20
 				break
+
+			elif level == 2:
+				level = 15
+				break
+
+			elif level == 3:
+				level = 5	
+				break
+
 			else:
 				print('Ensira um número de 1 a 3, por favor.')
 
 		except ValueError:
 			print('Somente números, por favor.')
 
-	letter_word = input('Digite um letra ou palavra (caso vc saiba ;p) : ')	
 
 	# SETTING A LIST TO PUT THE USERS'S VALUES
-	users_answer = []
+	answer_secret_word = []
 
-	for letra in secret_word:
-		if letra == 
+	for chances in range(level):
+		user_answer = input('Digite uma letra: ')
 
+		if user_answer in secret_word and user_answer not in answer_secret_word:
+			for letra in secret_word:
+				if letra == user_answer:
+					answer_secret_word.append(letra)
+		else:
+			print('Não tem essa letra na palavra.')
 
-
-
+	print(answer_secret_word)
 
 if __name__ == '__main__':
 	jogar()
