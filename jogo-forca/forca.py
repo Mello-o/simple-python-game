@@ -7,26 +7,39 @@ def jogar():
 	# SETTING THE SECRET WORD
 	secret_word = 'banana'
 
+	print('\nDigite uma letra e tente acertar a palavra secreta a seguir: \n')
+
 	# SETTING A LIST TO PUT THE USERS'S VALUES
-	answer_secret_word = []
+	answer_secret_word = ['__', '__', '__', '__', '__','__']
 
 	for chances in range(len(secret_word)):
-		user_answer = input('Digite uma letra: ')
+		
+		for letra in answer_secret_word:
+			print(letra, end=' ')
+		
+		while True:
+			try:
+				users_answer = input('\n\nDigite uma letra: ')
+				index = 0
+				
+				if users_answer in answer_secret_word:
+					print('Voce já digitou essa letra...')
+				else:
+					break
+			except ValueError:
+				print('Somente letras, por favor.')
 
-		if user_answer in secret_word and user_answer not in answer_secret_word:
-			for letra in secret_word:
-				if letra == user_answer:
-					answer_secret_word.append(letra)
-					print(f'Parabéns, temos a letra {letra} em {secret_word.count(letra)} posições.')
+
+		for letra in secret_word:
+			
+			if letra == users_answer:
+				answer_secret_word[index] = letra
+			
+			index = index + 1
 
 
-		elif user_answer in secret_word:
-			print('\nVocê já digitou essa letra')
-
-		else:
-			print(f'\nA palatra secreta não possui a letra {user_answer}')
-
-	print(answer_secret_word)
 
 if __name__ == '__main__':
 	jogar()
+
+	
