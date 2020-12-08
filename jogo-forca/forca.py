@@ -14,17 +14,13 @@ def jogar():
 	print('\nDigite uma letra e tente acertar a palavra secreta a seguir: \n')
 
 	# SETTING A LIST TO PUT THE USERS'S VALUES
-	answer_secret_word = []
-	for letra in range(len(secret_word)):
-		answer_secret_word.append(None)
+	answer_secret_word = ['__' for letra in secret_word]
+
 
 	for chances in range(len(secret_word)):
 		
 		for letra in answer_secret_word:
-			if letra != None:
 				print(letra, end = ' ')
-			else:
-				print('__', end = ' ')
 		
 		while True:
 			
@@ -49,7 +45,7 @@ def jogar():
 			
 			index = index + 1
 
-		if None not in answer_secret_word:
+		if '__' not in answer_secret_word:
 			print('-'*48)
 			print('\n###  VOCÊ ACERTOU A PALABRA SECRETA!!!  ###')
 			print('\n  *****', secret_word, '*****  \n')
