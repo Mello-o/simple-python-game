@@ -1,7 +1,11 @@
 import random
 import dica_adivinhacao
+import os
 
 def jogar():
+
+	os.system('cls' if os.name == 'nt' else 'clear')
+
 	print('\n*'*5)
 	print('****** BEM VINDO AO JOGO DE ADIVINHAÇÃO ******')
 
