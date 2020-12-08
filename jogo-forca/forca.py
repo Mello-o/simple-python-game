@@ -1,11 +1,15 @@
+import os
+
 def jogar():
+
+	os.system('clear')
 
 	print('\n\n','*'*37)
 	print('***** BEM VINDO AO JOGO DA FORCA *****')
 	print('*'*38, '\n')
 	
 	# SETTING THE SECRET WORD
-	secret_word = 'banana'
+	secret_word = 'banana'.upper()
 
 	print('\nDigite uma letra e tente acertar a palavra secreta a seguir: \n')
 
@@ -18,17 +22,20 @@ def jogar():
 			print(letra, end=' ')
 		
 		while True:
-			try:
-				users_answer = input('\n\nDigite uma letra: ')
-				index = 0
+			
+			users_answer = input('\n\nDigite uma letra: ').strip().upper()
+			index = 0
 				
-				if users_answer in answer_secret_word:
-					print('Voce já digitou essa letra...')
-				else:
-					break
-			except ValueError:
-				print('Somente letras, por favor.')
+			if users_answer in answer_secret_word:
+				print('\nVoce já digitou essa letra...\n')
+				break
 
+			elif users_answer not in secret_word:
+				print('\nA palavra secreta não possui essa letra...\n')
+				break
+
+			else:
+				break
 
 		for letra in secret_word:
 			
