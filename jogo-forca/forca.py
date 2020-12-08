@@ -49,7 +49,14 @@ def jogar():
 			
 			index = index + 1
 
+		if None not in answer_secret_word:
+			print('-'*48)
+			print('\n###  VOCÊ ACERTOU A PALABRA SECRETA!!!  ###')
+			print('\n  *****', secret_word, '*****  \n')
+			print('-'*48)
+			break
 
+	print('\n\nFim do jogo...\n')
 
 if __name__ == '__main__':
 	jogar()
