@@ -126,3 +126,6 @@ dmypy.json
 
 __init__.py
 jogar.py
+.DS_Store
+jogo-forca/.DS_Store
+
