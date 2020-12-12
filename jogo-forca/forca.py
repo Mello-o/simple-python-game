@@ -1,4 +1,5 @@
 import os
+import selecao_palavra
 
 def jogar():
 
@@ -9,7 +10,7 @@ def jogar():
 	print('*'*38, '\n')
 	
 	# SETTING THE SECRET WORD
-	secret_word = 'banana'.upper()
+	secret_word = selecao_palavra.secret_word().upper()
 
 	print('\nDigite uma letra e tente acertar a palavra secreta a seguir: \n')
 
