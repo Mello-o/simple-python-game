@@ -48,7 +48,7 @@ def jogar():
 
 		if '__' not in correct_letters:
 			print('-'*48)
-			print('\n###  VOCÊ ACERTOU A PALABRA SECRETA!!!  ###')
+			print('\n###  VOCÊ ACERTOU A PALAVRA SECRETA!!!  ###')
 			print('\n  *****', secret_word, '*****  \n')
 			print('-'*48)
 			break
